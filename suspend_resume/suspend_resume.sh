@@ -10,6 +10,7 @@ MAX_CYCLES=10000
 COMPATIBLE=$(tr '\0' ' ' < /proc/device-tree/compatible)
 
 # Debug options
+# To enable the debug configuration, the CONFIG_RK_CONSOLE_THREAD in the kernel configuration needs to be disabled.
 # echo N > /sys/module/printk/parameters/console_suspend
 # echo 1 > /sys/power/pm_print_times
 
