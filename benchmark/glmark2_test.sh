@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the path to the script relative to the current script's location
-SCRIPT_PATH=" ${CURRENT_DIR}/../gpu/gpu_test.sh &"
+SCRIPT_PATH="$(dirname $0)/../gpu/gpu_test.sh"
 
 # Check if the script exists and is executable
 if [ -x "$SCRIPT_PATH" ]; then
