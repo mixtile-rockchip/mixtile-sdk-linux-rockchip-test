@@ -36,6 +36,9 @@ elif [[ "$1" == "rk3576" ]]; then
 elif [[ "$1" == "rk3588" || "$1" == "rk3588s" ]]; then
 	taskset -c 4-8 glmark2-es2-wayland --off-screen
 
+elif [[ "$1" == "rv1126b" || "$1" == "rv1126bp" ]]; then
+	glmark2-es2-wayland --off-screen
+
 else
 	echo "please check if the linux support it!!!!!!"
 fi
@@ -81,6 +84,10 @@ elif [[ $(expr $COMPATIBLE : ".*rk3576") -ne 0 ]]; then
 	CHIPNAME="rk3576"
 elif [[ $(expr $COMPATIBLE : ".*rk3588") -ne 0 ]]; then
 	CHIPNAME="rk3588"
+elif [[ $(expr $COMPATIBLE : ".*rv1126b") -ne 0 ]]; then
+	CHIPNAME="rv1126b"
+elif [[ $(expr $COMPATIBLE : ".*rv1126bp") -ne 0 ]]; then
+	CHIPNAME="rv1126bp"
 else
 	CHIPNAME="rk3399"
 fi
