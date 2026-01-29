@@ -19,10 +19,10 @@ elif [[ "$1" == "rk3328" || "$1" == "rk3528" ]]; then
 	glmark2-es2-wayland --run-forever --fullscreen --visual-config='stencil=8' --annotate
 
 elif [[  "$1" == "rk3399"  ]]; then
-	taskset -c 4-5 glmark2-es2-wayland --run-forever --fullscreen --annotate
+	glmark2-es2-wayland --run-forever --fullscreen --annotate
 
 elif [[ "$1" == "rk3399pro" ]]; then
-	taskset -c 4-5 glmark2-es2-wayland --run-forever --fullscreen --annotate
+	glmark2-es2-wayland --run-forever --fullscreen --annotate
 
 elif [[ "$1" == "rk3562" ]]; then
 	glmark2-es2-wayland --run-forever --fullscreen --annotate
@@ -30,11 +30,14 @@ elif [[ "$1" == "rk3562" ]]; then
 elif [[ "$1" == "rk3566" || "$1" == "rk3568" ]]; then
 	glmark2-es2-wayland --run-forever --fullscreen --annotate
 
+elif [[ "$1" == "rk3572" ]]; then
+	glmark2-es2-wayland --run-forever --fullscreen --annotate
+
 elif [[ "$1" == "rk3576" ]]; then
-	taskset -c 4-8 glmark2-es2-wayland --run-forever --fullscreen --annotate
+	glmark2-es2-wayland --run-forever --fullscreen --annotate
 
 elif [[ "$1" == "rk3588" || "$1" == "rk3588s" ]]; then
-	taskset -c 4-8 glmark2-es2-wayland --run-forever --fullscreen --annotate
+	glmark2-es2-wayland --run-forever --fullscreen --annotate
 
 elif [[ "$1" == "rv1126b" || "$1" == "rv1126bp" ]]; then
 	glmark2-es2-wayland --run-forever --fullscreen --annotate
@@ -80,6 +83,8 @@ elif [[ $(expr $COMPATIBLE : ".*rk3566") -ne 0 ]]; then
 	CHIPNAME="rk3566"
 elif [[ $(expr $COMPATIBLE : ".*rk3568") -ne 0 ]]; then
 	CHIPNAME="rk3568"
+elif [[ $(expr $COMPATIBLE : ".*rk3572") -ne 0 ]]; then
+	CHIPNAME="rk3572"
 elif [[ $(expr $COMPATIBLE : ".*rk3576") -ne 0 ]]; then
 	CHIPNAME="rk3576"
 elif [[ $(expr $COMPATIBLE : ".*rk3588") -ne 0 ]]; then
