@@ -19,7 +19,7 @@ declare -A MODULE_SCRIPTS=(
     [ddr]="ddr/ddr_test.sh"
     [cpu]="cpu/cpu_test.sh"
     [gpu]="gpu/gpu_test.sh"
-    [npu]="npu2/npu_test.sh"
+    [npu]="npu/npu_test.sh"
     [suspend_resume]="suspend_resume/suspend_resume.sh"
     [reboot]="auto_reboot/auto_reboot.sh"
     [power_lost]="flash_test/power_lost_test.sh"
@@ -156,7 +156,7 @@ module_test() {
         1)  bash "$CURRENT_DIR/ddr/ddr_test.sh" ;;
         2)  bash "$CURRENT_DIR/cpu/cpu_test.sh" ;;
         3)  bash "$CURRENT_DIR/gpu/gpu_test.sh" ;;
-        4)  bash "$CURRENT_DIR/npu2/npu_test.sh" ;;
+        4)  bash "$CURRENT_DIR/npu/npu_test.sh" ;;
         5)  bash "$CURRENT_DIR/suspend_resume/suspend_resume.sh" ;;
         6)
             fcnt=/userdata/rockchip/reboot_cnt

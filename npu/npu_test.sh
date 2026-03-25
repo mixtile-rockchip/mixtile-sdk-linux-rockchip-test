@@ -1,5 +1,5 @@
 #!/bin/bash
-# npu2/npu_test.sh - NPU test dispatcher
+# npu/npu_test.sh - NPU test dispatcher
 # Supports both interactive and CLI modes.
 
 DIR_NPU="$(cd "$(dirname "$0")" && pwd)"
@@ -27,8 +27,8 @@ echo "***            NPU TEST                           ***"
 echo "***                                               ***"
 echo "*****************************************************"
 echo "***********************************************************"
-echo "npu stress test:					1"
-echo "npu scale frequency test:			2"
+echo "npu stress test:                  1"
+echo "npu scale frequency test:         2"
 echo "***********************************************************"
 
 read -t 30 NPU_CHOICE
