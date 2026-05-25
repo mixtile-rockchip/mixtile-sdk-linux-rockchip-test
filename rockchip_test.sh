@@ -41,6 +41,7 @@ module_choice()
     echo "pcie test:            16 (pcie test)"
     echo "chromium test:        17 (chromium with video test)"
     echo "benchmark test:       18 (unixbench、glmark2...)"
+    echo "ab update test:       19 (ab update stress test)"
     echo "*****************************************************"
 
     read -t 30 -p "please input test moudle: " MODULE_CHOICE
@@ -166,6 +167,11 @@ power_lost_test()
     bash ${CURRENT_DIR}/flash_test/power_lost_test.sh  &
 }
 
+ab_update_test()
+{
+    bash ${CURRENT_DIR}/ab_update_test/ab_stress_start.sh 10000&
+}
+
 module_test()
 {
 	case ${MODULE_CHOICE} in
@@ -222,6 +228,9 @@ module_test()
 			;;
 		18)
 			benchmark_test
+			;;
+		19)
+			ab_update_test
 			;;
 	esac
 }
