@@ -25,32 +25,32 @@ read -t 30 VIDEO_CHOICE
 
 video_test()
 {
-	sh ${DIR_VIDEO}/test_gst_video.sh
+	bash ${DIR_VIDEO}/test_gst_video.sh
 }
 
 video_test_fps()
 {
-	sh ${DIR_VIDEO}/test_gst_video_fps.sh
+	bash ${DIR_VIDEO}/test_gst_video_fps.sh
 }
 
 video_test_maxfps()
 {
-	sh ${DIR_VIDEO}/test_gst_video_maxfps.sh
+	bash ${DIR_VIDEO}/test_gst_video_maxfps.sh
 }
 
 multivideo_test()
 {
-	sh ${DIR_VIDEO}/test_gst_multivideo.sh
+	bash ${DIR_VIDEO}/test_gst_multivideo.sh
 }
 
 video_benchmark_test()
 {
-	sh ${DIR_VIDEO}/test_gst_video_benchmark.sh
+	bash ${DIR_VIDEO}/test_gst_video_benchmark.sh
 }
 
 video_stresstest()
 {
-	sh ${DIR_VIDEO}/video_stresstest.sh
+	bash ${DIR_VIDEO}/video_stresstest.sh
 }
 
 case ${VIDEO_CHOICE} in

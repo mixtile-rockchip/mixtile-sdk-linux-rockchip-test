@@ -21,12 +21,12 @@ read -t 30 CHROMIUM_CHOICE
 
 chromium_test()
 {
-	sh ${DIR_CHROMIUM}/test_chromium_with_video.sh
+	bash ${DIR_CHROMIUM}/test_chromium_with_video.sh
 }
 
 simplebrowser_test()
 {
-	sh ${DIR_CHROMIUM}/test_simplebrowser.sh
+	bash ${DIR_CHROMIUM}/test_simplebrowser.sh
 }
 
 case ${CHROMIUM_CHOICE} in
