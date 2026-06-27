@@ -18,8 +18,7 @@ log_info "video" "Playing with FPS: $URI with sink=$SINK"
 set +e
 if [[ "$SINK" == "waylandsink" ]]; then
     GST_DEBUG=fps*:7 gst-launch-1.0 uridecodebin uri="$URI" ! fpsdisplaysink \
-        video-sink="waylandsink" \
-        fullscreen=true \
+        video-sink="waylandsink fullscreen=true" \
         text-overlay=false \
         signal-fps-measurements=true \
         sync=false
